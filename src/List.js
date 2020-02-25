@@ -3,11 +3,21 @@ import Card from './Card';
 import './List.css';
 
 export default class List extends Component {
-    render () {
+    render() {
         return (
-            <div>
-            <h1>Hello List</h1>
-            <Card/>
+            <div className="List">
+                <header className="List-header">
+                    {this.props.header}
+                </header>
+                    <div className="List-cards">
+                        {this.props.cards.map(card =>
+                            <Card
+                            title={card.title}
+                            content={card.content}
+                            key={card.id}
+                        />    
+                        )}
+                    </div>
             </div>
         )
     }

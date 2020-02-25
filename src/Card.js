@@ -4,8 +4,11 @@ import './Card.css';
 export default class Card extends Component {
     render () {
         return (
-            <h2>Hello card</h2>
-
+            <div className="Card">
+                <button type="button">delete</button>
+                <h3>{this.props.title}</h3>
+                <p>{this.props.content}</p>
+            </div>
         )
     }
 }
